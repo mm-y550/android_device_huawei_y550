@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VENDOR=huawei
-DEVICE=cherry
+DEVICE=y550
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
