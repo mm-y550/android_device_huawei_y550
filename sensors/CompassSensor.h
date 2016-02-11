@@ -36,21 +36,23 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "SensorBase.h"
 #include "InputEventReader.h"
-#include "NativeSensorManager.h"
 
 /*****************************************************************************/
 
 struct input_event;
 
 class CompassSensor : public SensorBase {
+	int mEnabled;
 	InputEventCircularReader mInputReader;
 	sensors_event_t mPendingEvent;
 	bool mHasPendingEvent;
+	char input_sysfs_path[PATH_MAX];
+	int input_sysfs_path_len;
 	int64_t mEnabledTime;
 	float res;
 
 public:
-	CompassSensor(struct SensorContext *context);
+	CompassSensor(char* name, sensor_t* sensor_info = NULL);
 	virtual ~CompassSensor();
 	virtual int readEvents(sensors_event_t* data, int count);
 	virtual bool hasPendingEvents() const;
