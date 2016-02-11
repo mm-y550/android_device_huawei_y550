@@ -20,7 +20,7 @@
 LOCAL_PATH := device/huawei/y550
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := c8817d,g620s,C8817D,C8817E,G621-TL00,G620S-UL00,G620S-L01,Y550-L01,Y550-L02,Y550-L03
+TARGET_OTA_ASSERT_DEVICE := Y550-L01,Y550-L02,Y550-L03
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8916
@@ -131,7 +131,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 an
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_DTBTOOL_ARGS := -2
 TARGET_KERNEL_SOURCE := kernel/huawei/y550
-TARGET_KERNEL_CONFIG := cyanogenmod_cherry_defconfig
+TARGET_KERNEL_CONFIG := y550_defconfig
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -174,6 +174,7 @@ endif
 
 # Ril
 TARGET_RIL_VARIANT := caf
+PROTOBUF_SUPPORTED := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
