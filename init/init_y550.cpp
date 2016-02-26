@@ -114,4 +114,14 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "G620S-L01-user 4.4.4 GRJ90 C00B380 release-keys");
         property_set("ro.build.fingerprint", "Huawei/G620S-L01/hwG620S-L01:4.4.4/HuaweiG620S-L01/C00B380:user/release-keys");
     }
+    /* Y550-L01 */
+    else if (strstr(model, "Y550-L01") != NULL) {
+        property_set("ro.product.model", "Y550-L01");
+        property_set("ro.product.name", "Y550-L01");
+        property_set("ro.product.device", "Y550-L01");
+        property_set("ro.build.product", "Y550-L01");
+        property_set("ro.telephony.default_network", "9");
+        property_set("ro.build.description", "Y550-L01-user 4.4.4 GRJ90 C00B239SP01 release-keys");
+        property_set("ro.build.fingerprint", "Huawei/Y550-L01/hwY550-L01:4.4.4/HuaweiY550-L01/C00B239SP01:user/ota-rel-keys,release-keys");
+    }
 }
